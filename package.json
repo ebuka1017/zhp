@@ -1,0 +1,33 @@
+{
+  "name": "ecommerce-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modern full-stack e-commerce application with React Native, Next.js, and Node.js",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "backend": "npm run dev --workspace=backend",
+    "web": "npm run dev --workspace=web-dashboard",
+    "mobile": "npm run start --workspace=mobile-app",
+    "install:all": "npm install",
+    "build:all": "npm run build --workspaces",
+    "prisma:generate": "npm run prisma:generate --workspace=backend",
+    "prisma:migrate": "npm run prisma:migrate --workspace=backend"
+  },
+  "keywords": [
+    "ecommerce",
+    "react-native",
+    "nextjs",
+    "nodejs",
+    "prisma",
+    "postgresql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
